@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Poodoro — Your Healthy Recipe Vault</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="splash" class="splash">
+  <div class="splash-card">
+    <h1 class="hand">Made for you ✨</h1>
+    <p class="hand tiny">Happy Birthday — recipes, wrapped in love. — Poodoro</p>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="brand">
+    <img src="poodoro/poodoro_pose_1.png" class="brand-poodle" alt="poodoro">
+    <h1>Poodoro — Healthy Recipe Vault</h1>
+  </div>
+  <div class="controls">
+    <input id="search" placeholder="Search recipes..." />
+    <button id="surprise">Surprise 💫</button>
+    <button id="favesBtn">Favourites ❤️</button>
+    <button id="vaultBtn">Secret Vault 🔒</button>
+  </div>
+</header>
+
+<main class="container">
+  <section class="add-card panel">
+    <h2>Add a recipe</h2>
+    <input id="title" placeholder="Recipe name" />
+    <input id="link" placeholder="YouTube/Instagram link" />
+    <textarea id="desc" placeholder="Short cute description (handwritten!)"></textarea>
+    <div class="row">
+      <select id="thumbSelect">
+        <option value="">Choose Mascot</option>
+        <option value="poodoro_pose_1.png">Poodoro: playful</option>
+        <option value="poodoro_pose_2.png">Poodoro: sparkly</option>
+        <option value="poodoro_pose_3.png">Poodoro: chef</option>
+        <option value="poodoro_pose_4.png">Poodoro: pouty</option>
+        <option value="poodoro_pose_5.png">Poodoro: soft</option>
+        <option value="poodoro_pose_6.png">Poodoro: sleepy</option>
+        <option value="poodoro_pose_7.png">Poodoro: cuddle</option>
+        <option value="poodoro_pose_8.png">Poodoro: message</option>
+        <option value="poodoro_pose_9.png">Poodoro: footer</option>
+      </select>
+      <button id="add">Add</button>
+    </div>
+  </section>
+
+  <section id="recipes" class="grid"></section>
+</main>
+
+<!-- Sticky note -->
+<div id="sticky" class="sticky">
+  <div class="note">
+    <p>“Poodoro believes in you 💗”</p>
+  </div>
+</div>
+
+<!-- Vault modal -->
+<div id="vault" class="modal hidden">
+  <div class="modal-card">
+    <h3>Secret Love Vault</h3>
+    <input id="vaultPass" placeholder="Enter password" />
+    <div class="row">
+      <button id="vaultOpen">Open</button>
+      <button id="vaultClose">Close</button>
+    </div>
+    <p class="hint">Hint: it's a sweet nickname.</p>
+    <div id="vaultContent" class="vaultContent hidden">
+      <p>You're my everything. — Love note stored here.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Favourites modal -->
+<div id="favouritesModal" class="modal hidden">
+  <div class="modal-card">
+    <h3>Your Favourites</h3>
+    <div id="faveList"></div>
+    <button id="closeFaves">Close</button>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>Made with love for you — Poodoro 💗</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
